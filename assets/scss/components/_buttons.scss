@@ -1,1 +1,14 @@
-@import "../abstracts/variables"
+@import "../abstracts/variables";
+
+
+button {
+    width: 204px;
+    height: 56px;
+    background: #FFD050;
+    border: unset;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    color: #232536;
+    margin-top: 35px;
+}

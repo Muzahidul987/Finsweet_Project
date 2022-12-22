@@ -1,20 +1,46 @@
 @import "./../../components/reset";
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
 @import "./../../abstracts/variables";
 @import "./../../mixins/common";
-@import "./../../mixins/responsive"; 
+@import "./../../mixins/responsive";
 
-#banner{
-    background-image: url("") ;
+#banner {
+    background-image: url("../../../images/banner.png");
     background-size: cover;
-    width: 100vw;
-    height: 720px;
-    .banner_body{
+    border: $border;
+
+    .banner_body {
         border: $border;
-        h4{
-            span{}
+        width: 804px;
+        height: 400px;
+        margin: 128px 556px 192px 80px;
+
+        h4 {
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 28px;
+            margin-bottom: 24px;
+
+            span {
+                font-weight: 600;
+            }
         }
-        h1{}
-        p{}
-        button{}
+
+        h1 {
+            font-size: 53px;
+            line-height: 63px;
+            margin-bottom: 24px;
+        }
+
+        
+
+        p {
+            width: 600px;
+            font-size: 16px;
+            font-weight: 26px;
+            margin-bottom: 48px;
+        }
+
     }
 }

@@ -1,0 +1,45 @@
+@import "./reset";
+@import "./../abstracts/variables";
+@import "./../mixins/common";
+@import "./../mixins/responsive";
+
+nav{
+    .navbar{
+        background-color: $deep_color;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        .logo{
+            padding: 26px 621px 26px 83px;
+            .logo_img{
+                img{
+                    width: 140px;
+                }
+            }
+        }
+
+        .options{
+            display: flex;
+            gap: 32px;
+
+            ul{
+                display: flex;
+                gap: 24px;
+                padding: 25px 0px;
+                li{
+                    a{
+                        color: $white;
+                    }
+                }
+            }
+
+            .button{
+                padding: 12px 0px;
+                button{
+                    padding: 16px 48px;
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

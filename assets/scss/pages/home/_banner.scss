@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./../abstracts/variables";
+@import "./../mixins/common";
+@import "./../mixins/responsive"; 
+
+#banner{
+    .banner_body{
+        h4{}
+        h1{}
+        p{}
+        button{}
+    }
+}

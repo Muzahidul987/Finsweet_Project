@@ -1,11 +1,18 @@
-@import "./reset";
-@import "./../abstracts/variables";
-@import "./../mixins/common";
-@import "./../mixins/responsive"; 
+@import "./../../components/reset";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive"; 
 
 #banner{
+    background-image: url("") ;
+    background-size: cover;
+    width: 100vw;
+    height: 720px;
     .banner_body{
-        h4{}
+        border: $border;
+        h4{
+            span{}
+        }
         h1{}
         p{}
         button{}

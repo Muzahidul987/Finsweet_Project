@@ -5,7 +5,7 @@
 
 nav {
     position: relative;
-
+    
     .nav_toggle_btn {
         button {
             display: none;
@@ -73,17 +73,20 @@ nav {
                 padding: 20px 5px;
                 margin-left: 25px;
             }
-            @include lg{
+
+            @include lg {
                 padding: 15px 20px;
             }
-            @include xl{
+
+            @include xl {
                 padding: 20px 40px;
             }
 
             .logo_img {
                 img {
                     width: 140px;
-                    @include md{
+
+                    @include md {
                         width: 110px;
                     }
                 }
@@ -98,7 +101,7 @@ nav {
                 flex-wrap: wrap;
             }
 
-            @include md{
+            @include md {
                 flex-wrap: wrap;
             }
 
@@ -110,7 +113,8 @@ nav {
                 @include custom_responsive(0px, 767.9px) {
                     flex-wrap: wrap;
                 }
-                @include md{
+
+                @include md {
                     padding: 20px 0px;
                     gap: 20px;
                 }
@@ -141,18 +145,21 @@ nav {
                         padding: 16px 10px;
                         margin-left: 10px;
                     }
-                    @include md{
+
+                    @include md {
                         width: 100px;
                         height: 35px;
-                        padding:6px 0px;
+                        padding: 6px 0px;
                         font-size: 15px;
                     }
-                    @include lg{
+
+                    @include lg {
                         padding: unset;
                         width: 100px;
                         height: 40px;
                     }
-                    @include xl{
+
+                    @include xl {
                         padding: unset;
                         width: 160px;
                         height: 45px;
@@ -178,13 +185,16 @@ nav {
                 z-index: 999999;
             }
         }
-        @include md{
+
+        @include md {
             grid-template-columns: 330px 1fr;
         }
-        @include lg{
+
+        @include lg {
             grid-template-columns: 550px 1fr;
         }
-        @include xl{
+
+        @include xl {
             grid-template-columns: 700px 1fr;
         }
     }

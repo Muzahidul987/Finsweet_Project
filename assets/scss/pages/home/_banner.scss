@@ -4,15 +4,17 @@
 @import "./../../abstracts/variables";
 @import "./../../mixins/common";
 @import "./../../mixins/responsive";
+@import "./../../components/nav";
 
 #banner {
     display: none;
-    background-image: url("../../../images/banner.png");
+    background-image: url("../../../images/Featured_Post.png");
+    // background-color: $deep_color;
     background-size: cover;
     border: $border;
 
     .banner_body {
-        border: $border;
+        // border: $border;
         width: 804px;
         height: 400px;
         margin: 128px 556px 192px 80px;
@@ -34,7 +36,7 @@
             margin-bottom: 24px;
         }
 
-        
+
 
         p {
             width: 600px;

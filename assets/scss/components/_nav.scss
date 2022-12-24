@@ -3,43 +3,152 @@
 @import "./../mixins/common";
 @import "./../mixins/responsive";
 
-nav{
-    .navbar{
+nav {
+    position: relative;
+
+    .nav_toggle_btn {
+        button {
+            display: none;
+            position: relative;
+
+            i {
+                font-size: 30px;
+                color: $white;
+                border: none;
+                border-radius: 5px;
+
+                &:hover {
+                    color: $light_gray;
+                }
+            }
+
+            @include custom_responsive(0px, 767.9px) {
+                display: block;
+                margin: unset;
+                width: unset;
+                position: absolute;
+                top: 0px;
+                right: 0px;
+
+            }
+
+            @include md {}
+        }
+    }
+
+    #nav_toggle {
         background-color: $deep_color;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        .logo{
+        position: relative;
+
+        button {
+            &.cross {
+                display: none;
+
+                @include custom_responsive(0px, 767.9px) {
+                    display: block;
+                    margin: unset;
+                    width: 35px;
+                    position: absolute;
+                    top: 0px;
+                    right: 0px;
+                    font-size: 30px;
+
+                }
+            }
+
+        }
+
+
+        .logo {
             padding: 26px 621px 26px 83px;
-            .logo_img{
-                img{
+
+            @include custom_responsive(0px, 767.9px) {
+                padding: 26px 5px;
+                margin-top: 40px;
+            }
+
+            @include md {
+                padding: 26px 5px;
+                margin-top: 40px;
+            }
+
+            .logo_img {
+                img {
                     width: 140px;
                 }
             }
         }
 
-        .options{
+        .options {
             display: flex;
             gap: 32px;
 
-            ul{
+            @include custom_responsive(0px, 767.9px) {
+                flex-wrap: wrap;
+            }
+
+            @include md{
+                flex-wrap: wrap;
+            }
+
+            ul {
                 display: flex;
                 gap: 24px;
                 padding: 25px 0px;
-                li{
-                    a{
+
+                @include custom_responsive(0px, 767.9px) {
+                    flex-wrap: wrap;
+
+                }
+
+                li {
+                    @include custom_responsive(0px, 767.9px) {
+                        width: 100%;
+                    }
+
+                    a {
                         color: $white;
                     }
                 }
             }
 
-            .button{
+            .button {
                 padding: 12px 0px;
-                button{
+
+                button {
+                    margin-top: 0px;
                     padding: 16px 48px;
                     font-size: 18px;
                     font-weight: 700;
+
+                    @include custom_responsive(0px, 767.9px) {
+                        width: 140px;
+                        padding: 16px 10px;
+                        margin-left: 10px;
+                    }
                 }
             }
         }
+
+        @include custom_responsive(0px, 767.9px) {
+            display: unset;
+            background-color: $deep_color;
+            width: 50vw;
+            height: calc(100vh - 60px);
+            position: absolute;
+            top: 0px;
+            right: -100vw;
+
+            @include tr;
+
+            &.active {
+                right: 0px;
+                z-index: 999999;
+            }
+
+        }
     }
+
 }

@@ -6,6 +6,7 @@
 @import "./../../mixins/responsive";
 
 #banner {
+    display: none;
     background-image: url("../../../images/banner.png");
     background-size: cover;
     border: $border;

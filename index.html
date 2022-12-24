@@ -12,7 +12,15 @@
 
 <body>
     <nav>
-        <div class="navbar">
+        <div class="nav_toggle_btn">
+            <button onclick="nav_toggle.classList.toggle('active')">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+        </div>
+        <div id="nav_toggle" class="navbar">
+            <button onclick="nav_toggle.classList.toggle('active')" class="cross">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <div class="logo">
                 <div class="logo_img">
                     <img src="./assets/images/Logo.png" alt="logo">

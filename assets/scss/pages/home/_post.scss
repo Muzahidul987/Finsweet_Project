@@ -7,7 +7,8 @@
 
 
 #post {
-    display: grid;
+    display: none;
+    // display: grid;
     grid-template-columns: 733px 1fr;
     gap: 32px;
     padding: 128px 80px;
@@ -45,7 +46,7 @@
             display: flex;
             justify-content: space-between;
 
-            a {}
+         
         }
 
         .sub_post {

@@ -5,7 +5,7 @@
 
 nav {
     position: relative;
-    
+ 
     .nav_toggle_btn {
         button {
             display: none;
@@ -27,8 +27,8 @@ nav {
                 margin: unset;
                 width: unset;
                 position: absolute;
-                top: 0px;
-                right: 0px;
+                top: 5px;
+                right: 5px;
 
             }
 
@@ -177,7 +177,6 @@ nav {
             position: absolute;
             top: 0px;
             right: -100vw;
-
             @include tr;
 
             &.active {

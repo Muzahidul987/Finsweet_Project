@@ -7,13 +7,21 @@
 
 
 #post {
-
-    display: grid;
+        display: grid;
     grid-template-columns: 733px 1fr;
     gap: 32px;
     padding: 128px 80px;
 
     @include xs {
+        display: unset;
+        padding: unset;
+    }
+
+    @include sm {
+        display: unset;
+        padding: unset;
+    }
+    @include md {
         display: unset;
         padding: unset;
     }
@@ -25,12 +33,16 @@
         @include xs {
             border: none;
         }
-
+       
         img {
             margin-bottom: 32px;
 
             @include xs {
                 width: calc(90vw - 32px);
+            }
+
+            @include sm {
+                width: calc(95vw - 32px);
             }
         }
 
@@ -61,6 +73,10 @@
                     font-size: 12px;
                     line-height: 22px;
                 }
+
+                @include sm {
+                    width: 510px;
+                }
             }
 
         }
@@ -72,6 +88,10 @@
                 font-size: 12px;
                 line-height: 22px;
             }
+            @include sm {
+                width: 150px;
+                height: 45px;
+            }
         }
     }
 
@@ -81,12 +101,13 @@
             justify-content: space-between;
             padding-left: 40px;
 
-            @include xs {
+            @include custom_responsive(0px, 991.9px){
                 padding-left: 29px;
                 padding-right: 10px;
             }
-            h2{
-                @include xs{
+           
+            h2 {
+                @include custom_responsive(0px, 991.9px) {
                     margin: unset;
                 }
             }
@@ -95,7 +116,8 @@
 
         .sub_post {
             padding: 15px 115px 5px 32px;
-            @include xs{
+
+            @include xs {
                 padding: 12px 115px 5px 32px;
             }
 
@@ -104,7 +126,8 @@
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 34px;
-                @include xs{
+
+                @include xs {
                     width: 290px;
                     font-weight: 600;
                     font-size: 20px;

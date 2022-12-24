@@ -76,6 +76,9 @@ nav {
             @include lg{
                 padding: 15px 20px;
             }
+            @include xl{
+                padding: 20px 40px;
+            }
 
             .logo_img {
                 img {
@@ -149,6 +152,12 @@ nav {
                         width: 100px;
                         height: 40px;
                     }
+                    @include xl{
+                        padding: unset;
+                        width: 160px;
+                        height: 45px;
+
+                    }
                 }
             }
         }
@@ -174,6 +183,9 @@ nav {
         }
         @include lg{
             grid-template-columns: 550px 1fr;
+        }
+        @include xl{
+            grid-template-columns: 700px 1fr;
         }
     }
 

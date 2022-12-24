@@ -70,13 +70,16 @@ nav {
             }
 
             @include md {
-                padding: 26px 5px;
-                margin-top: 40px;
+                padding: 20px 5px;
+                margin-left: 25px;
             }
 
             .logo_img {
                 img {
                     width: 140px;
+                    @include md{
+                        width: 110px;
+                    }
                 }
             }
         }
@@ -100,7 +103,10 @@ nav {
 
                 @include custom_responsive(0px, 767.9px) {
                     flex-wrap: wrap;
-
+                }
+                @include md{
+                    padding: 20px 0px;
+                    gap: 20px;
                 }
 
                 li {
@@ -122,11 +128,19 @@ nav {
                     padding: 16px 48px;
                     font-size: 18px;
                     font-weight: 700;
+                    border-radius: 5px;
 
                     @include custom_responsive(0px, 767.9px) {
                         width: 140px;
                         padding: 16px 10px;
                         margin-left: 10px;
+                    }
+                    @include md{
+                        width: 100px;
+                        height: 35px;
+                        padding:6px 0px;
+                        font-size: 15px;
+
                     }
                 }
             }
@@ -147,7 +161,9 @@ nav {
                 right: 0px;
                 z-index: 999999;
             }
-
+        }
+        @include md{
+            grid-template-columns: 330px 1fr;
         }
     }
 

@@ -73,6 +73,9 @@ nav {
                 padding: 20px 5px;
                 margin-left: 25px;
             }
+            @include lg{
+                padding: 15px 20px;
+            }
 
             .logo_img {
                 img {
@@ -140,7 +143,11 @@ nav {
                         height: 35px;
                         padding:6px 0px;
                         font-size: 15px;
-
+                    }
+                    @include lg{
+                        padding: unset;
+                        width: 100px;
+                        height: 40px;
                     }
                 }
             }
@@ -164,6 +171,9 @@ nav {
         }
         @include md{
             grid-template-columns: 330px 1fr;
+        }
+        @include lg{
+            grid-template-columns: 550px 1fr;
         }
     }
 

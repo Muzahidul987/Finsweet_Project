@@ -7,14 +7,22 @@
 @import "./../../components/nav";
 
 #banner {
+
     // display: none;
     background-image: url("../images/banner.png");
     background-size: cover;
-    border: 1px solid transparent;
+    background-position: center;
+    // border: 1px solid transparent;
 
     @include custom_responsive(0px, 767.9px) {
         background-image: unset;
         color: unset;
+    }
+
+    .overlay {
+        background-image: url("../images/overlay.png");
+        background-size: cover;
+        background-position: center;
     }
 
     // @include md{
@@ -24,8 +32,8 @@
     .banner_body {
         color: $white;
         width: 804px;
-        height: 400px;
-        margin: 128px 556px 192px 80px;
+        // height: 400px;
+        padding: 128px 556px 192px 80px;
 
         @include xs {
             color: unset;
@@ -70,6 +78,7 @@
             font-weight: 26px;
             margin-bottom: 48px;
             color: $white;
+
             @include xs {
                 width: 330px;
                 margin-bottom: 30px;

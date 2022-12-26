@@ -7,17 +7,45 @@
 @import "./../../components/nav";
 
 #banner {
-    display: none;
-    background-image: url("../../../images/Featured_Post.png");
-    // background-color: $deep_color;
+    // display: none;
+    background-image: url("../images/banner.png");
     background-size: cover;
-    border: $border;
+    border: 1px solid transparent;
+
+    @include custom_responsive(0px, 767.9px) {
+        background-image: unset;
+        color: unset;
+    }
+    // @include md{
+    //     width: 520px;
+    // }
 
     .banner_body {
-        // border: $border;
+        color: $white;
         width: 804px;
         height: 400px;
         margin: 128px 556px 192px 80px;
+
+        @include xs {
+            color: unset;
+            margin: unset;
+            padding: 20px;
+            width: 330px;
+        }
+
+        @include sm {
+            color: unset;
+            margin: unset;
+            padding: 20px;
+            width: 570px;
+        }
+
+        @include md {
+            padding: 20px;
+            width: 570px;
+            margin-top: 20px;
+            margin-left: 20px;
+        }
 
         h4 {
             font-size: 18px;
@@ -28,21 +56,63 @@
             span {
                 font-weight: 600;
             }
+
+            @include xs {
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            @include sm {
+                font-size: 16px;
+                line-height: 26px;
+            }
         }
 
         h1 {
             font-size: 53px;
             line-height: 63px;
             margin-bottom: 24px;
+
+            @include xs {
+                font-size: 30px;
+                line-height: 40px;
+            }
+
+            @include sm {
+                font-size: 35px;
+                line-height: 45px;
+            }
         }
-
-
 
         p {
             width: 600px;
             font-size: 16px;
             font-weight: 26px;
             margin-bottom: 48px;
+
+            @include xs {
+                width: 330px;
+                margin-bottom: 30px;
+            }
+
+            @include sm {
+                width: 520px;
+                margin-bottom: 30px;
+            }
+        }
+
+        button {
+            @include xs {
+                width: 100px;
+                height: 30px;
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            @include sm {
+                width: 150px;
+                height: 45px;
+            }
         }
 
     }

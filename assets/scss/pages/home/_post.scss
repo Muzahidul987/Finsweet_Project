@@ -4,10 +4,11 @@
 @import "./../../abstracts/variables";
 @import "./../../mixins/common";
 @import "./../../mixins/responsive";
+@import "./../../components/nav";
 
 
 #post {
-        display: grid;
+    display: grid;
     grid-template-columns: 733px 1fr;
     gap: 32px;
     padding: 128px 80px;
@@ -21,9 +22,19 @@
         display: unset;
         padding: unset;
     }
+
     @include md {
         display: unset;
         padding: unset;
+    }
+
+    @include lg {
+        grid-template-columns: 485px 1fr;
+        padding: 60px 80px;
+    }
+    @include xl {
+        grid-template-columns: 685px 1fr;
+        padding: 50px;
     }
 
     .featured_post {
@@ -33,7 +44,7 @@
         @include xs {
             border: none;
         }
-       
+
         img {
             margin-bottom: 32px;
 
@@ -43,6 +54,13 @@
 
             @include sm {
                 width: calc(95vw - 32px);
+            }
+
+            @include lg {
+                width: 100%;
+            }
+            @include xl {
+                width: 100%;
             }
         }
 
@@ -58,6 +76,11 @@
                 @include xs {
                     font-size: 27px;
                     line-height: 37px;
+                }
+
+                @include lg {
+                    font-size: 23px;
+                    line-height: 33px;
                 }
             }
 
@@ -77,62 +100,69 @@
                 @include sm {
                     width: 510px;
                 }
-            }
 
+                @include lg {
+                    width: 370px;
+                    font-size: 14px;
+                    line-height: 24px;
+                }
+            }
         }
 
-        button {
-            @include xs {
-                width: 100px;
-                height: 30px;
-                font-size: 12px;
-                line-height: 22px;
-            }
-            @include sm {
-                width: 150px;
-                height: 45px;
-            }
-        }
     }
 
-    .all_post {
-        .all_post_heading {
-            display: flex;
-            justify-content: space-between;
-            padding-left: 40px;
-
-            @include custom_responsive(0px, 991.9px){
-                padding-left: 29px;
-                padding-right: 10px;
-            }
-           
-            h2 {
-                @include custom_responsive(0px, 991.9px) {
-                    margin: unset;
-                }
-            }
-
+    button {
+        @include xs {
+            width: 100px;
+            height: 30px;
+            font-size: 12px;
+            line-height: 22px;
         }
 
-        .sub_post {
-            padding: 15px 115px 5px 32px;
+        @include sm {
+            width: 150px;
+            height: 45px;
+        }
+    }
+}
+
+.all_post {
+    .all_post_heading {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 40px;
+
+        @include custom_responsive(0px, 991.9px) {
+            padding-left: 29px;
+            padding-right: 10px;
+        }
+
+        h2 {
+            @include custom_responsive(0px, 991.9px) {
+                margin: unset;
+            }
+        }
+
+    }
+
+    .sub_post {
+        padding: 15px 115px 5px 32px;
+
+        @include xs {
+            padding: 12px 115px 5px 32px;
+        }
+
+        p {
+            width: 369px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 34px;
 
             @include xs {
-                padding: 12px 115px 5px 32px;
-            }
-
-            p {
-                width: 369px;
-                font-weight: 700;
-                font-size: 24px;
-                line-height: 34px;
-
-                @include xs {
-                    width: 290px;
-                    font-weight: 600;
-                    font-size: 20px;
-                    line-height: 30px;
-                }
+                width: 290px;
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 30px;
             }
         }
     }

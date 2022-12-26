@@ -5,12 +5,11 @@
 
 nav {
     position: relative;
- 
+    
     .nav_toggle_btn {
         button {
             display: none;
             position: relative;
-
             i {
                 font-size: 30px;
                 color: $white;
@@ -126,6 +125,7 @@ nav {
 
                     a {
                         color: $white;
+                        text-align: center;
                     }
                 }
             }
@@ -178,10 +178,10 @@ nav {
             top: 0px;
             right: -100vw;
             @include tr;
-
+            z-index: 999999;
             &.active {
                 right: 0px;
-                z-index: 999999;
+                
             }
         }
 

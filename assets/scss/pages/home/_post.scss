@@ -32,6 +32,7 @@
         grid-template-columns: 485px 1fr;
         padding: 60px 80px;
     }
+
     @include xl {
         grid-template-columns: 685px 1fr;
         padding: 50px;
@@ -59,56 +60,11 @@
             @include lg {
                 width: 100%;
             }
+
             @include xl {
                 width: 100%;
             }
         }
-
-        .dis {
-            h3 {
-                margin-bottom: 16px;
-                margin-top: 16px;
-                font-weight: 700;
-                font-size: 28px;
-                line-height: 38px;
-                letter-spacing: -1px;
-
-                @include xs {
-                    font-size: 27px;
-                    line-height: 37px;
-                }
-
-                @include lg {
-                    font-size: 23px;
-                    line-height: 33px;
-                }
-            }
-
-            p {
-                width: 551px;
-                font-weight: 400;
-                font-size: 16px;
-                line-height: 26px;
-                color: $light_gray;
-
-                @include xs {
-                    width: 270px;
-                    font-size: 12px;
-                    line-height: 22px;
-                }
-
-                @include sm {
-                    width: 510px;
-                }
-
-                @include lg {
-                    width: 370px;
-                    font-size: 14px;
-                    line-height: 24px;
-                }
-            }
-        }
-
     }
 
     button {
@@ -136,13 +92,6 @@
             padding-left: 29px;
             padding-right: 10px;
         }
-
-        h2 {
-            @include custom_responsive(0px, 991.9px) {
-                margin: unset;
-            }
-        }
-
     }
 
     .sub_post {

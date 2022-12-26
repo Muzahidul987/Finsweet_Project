@@ -1,0 +1,56 @@
+@import "./../../components/reset";
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive";
+@import "./../../components/nav";
+
+
+#mission {
+    .line {
+        position: relative;
+
+        &::after {
+            content: "";
+            background: rgb(255, 208, 80);
+            background: linear-gradient(90deg, rgba(255, 208, 80, 1) 43%, rgba(255, 208, 80, 1) 77%, rgba(89, 46, 169, 1) 77%);
+            width: 70%;
+            height: 15px;
+            position: absolute;
+            top: -20px;
+            right: 0px;
+            border-radius: 3px;
+
+            @include custom_responsive(0px, 767575.9px) {
+                top: 0px;
+            }
+        }
+    }
+
+    .mission_div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 61px;
+        padding: 98px 108px 96px 80px;
+        background-color: #f8f7f0;
+
+        @include xs {
+            display: unset;
+            padding: unset;
+           
+        }
+
+        .about_us {
+          
+            button {
+                background-color: unset;
+                color: #592EA9;
+                margin: unset;
+                width: unset;
+            }
+        }
+
+        .mission {}
+    }
+}

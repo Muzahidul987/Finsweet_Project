@@ -35,14 +35,24 @@
         padding: 98px 108px 96px 80px;
         background-color: #f8f7f0;
 
-        @include xs {
+        @include custom_responsive (0px, 767.9px) {
             display: unset;
             padding: unset;
-           
+        }
+        @include md{
+            padding: 40px 0px;
+            gap: 25px;
         }
 
         .about_us {
-          
+            @include custom_responsive (0px, 767.9px) {
+                padding: 20px;
+            }
+
+            @include md {
+                padding: 20px;
+            }
+
             button {
                 background-color: unset;
                 color: #592EA9;
@@ -51,6 +61,10 @@
             }
         }
 
-        .mission {}
+        .our_mission {
+            @include custom_responsive (0px, 767.9px) {
+                padding: 20px;
+            }
+        }
     }
 }

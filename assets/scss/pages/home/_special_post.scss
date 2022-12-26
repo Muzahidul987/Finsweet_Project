@@ -1,0 +1,41 @@
+@import "./../../components/reset";
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive";
+@import "./../../components/nav";
+
+#special_post {
+    .post_layout {
+        position: relative;
+        padding: 0px 80px;
+        margin-top: 100px;
+
+        .des {
+            position: absolute;
+            top: 121px;
+            left: 574px;
+            // border: $border;
+            padding: 80px;
+            width: 706px;
+            height: 450px;
+            background-color: $white;
+
+            h4 {
+                margin-bottom: 24px;
+            }
+
+            h2 {
+                margin-bottom: 16px;
+                width: 546px;
+            }
+
+            button {
+                width: 269px;
+                height: 56px;
+                padding: 16px 30px;
+            }
+        }
+    }
+}

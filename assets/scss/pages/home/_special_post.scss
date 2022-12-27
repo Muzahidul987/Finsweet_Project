@@ -26,6 +26,10 @@
                     display: none;
                 }
 
+                @include md {
+                    width: 50%;
+                }
+
                 @include lg {
                     width: 50%;
                 }
@@ -54,6 +58,14 @@
 
             @include sm {
                 padding: 0px 20px;
+            }
+
+            @include md {
+                padding: 0px 20px;
+                top: 39px;
+                left: 269px;
+                width: 600px;
+                height: 330px;
             }
 
             @include lg {
@@ -89,6 +101,12 @@
                     width: 300px;
                 }
 
+                @include md {
+                    width: 430px;
+                    font-size: 24px;
+                    line-height: 34px;
+                }
+
                 @include lg {
                     width: 488px;
                     margin-bottom: 8px;
@@ -96,6 +114,11 @@
             }
 
             p {
+                @include md {
+                    font-size: 10px;
+                    line-height: 20px;
+                }
+
                 @include lg {
                     margin-bottom: unset;
                 }
@@ -116,6 +139,15 @@
                     width: 210px;
                     height: 48px;
                     padding: 5px 10px;
+                }
+
+                @include md {
+                    width: 175px;
+                    height: 39px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    padding: 8px;
+                    margin-top: 10px;
                 }
 
                 @include lg {

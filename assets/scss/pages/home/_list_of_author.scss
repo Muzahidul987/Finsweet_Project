@@ -1,0 +1,102 @@
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive";
+@import "./../../components/nav";
+
+
+#list_of_authors {
+    margin-top: 128px;
+
+    @include xs {
+        margin-top: 28px;
+    }
+
+    @include md {
+        margin-top: 168px;
+    }
+
+    // margin-bottom: 48px;
+    .authors_part {
+        h3 {
+            text-align: center;
+        }
+
+        .authors_list {
+            padding: 48px 70px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+
+            @include xs {
+                display: block;
+                padding: 20px 10px;
+            }
+
+            @include sm {
+                display: block;
+                padding: 20px 127px;
+            }
+
+            @include md {
+                grid-template-columns: repeat(2, 1fr);
+                padding: 20px 45px;
+            }
+
+            @include lg {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+                padding: 20px 25px;
+            }
+
+            @include xl {
+                gap: 20px;
+                padding: 20px 25px;
+            }
+
+            .author {
+                width: 260px;
+                background-color: #F4F4F4;
+                padding: 40px 30px;
+                text-align: center;
+                border-radius: 3px;
+
+                @include lg {
+                    width: 240px;
+                }
+                @include xl{
+                    width: 212px;
+                }
+
+                .img {
+
+                    img {
+                        margin: auto;
+                    }
+                }
+
+                h3 {
+                    padding-top: 20px;
+                }
+
+                h5 {
+                    color: #6D6E76;
+                }
+
+                ul {
+                    display: flex;
+                    gap: 16px;
+                    padding-top: 20px;
+
+                    li {
+
+                        i {
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -8,6 +8,17 @@
 #testimonials {
     padding: 80px;
 
+    @include xs {
+        padding: unset;
+    }
+
+    @include xs {
+        padding: unset;
+    }
+    @include md{
+        padding: 11px;
+    }
+
     .container {
         display: flex;
         gap: 80px;
@@ -15,15 +26,39 @@
         padding: 92px;
         position: relative;
 
+        @include xs {
+            padding: 30px;
+            display: block;
+        }
+
+        @include sm {
+            padding: 30px;
+            display: block;
+        }
+        @include md{
+            padding: 40px;
+            gap: 45px;
+        }
+
         .left {
             width: 349px;
 
+            @include xs {
+                width: 300px;
+            }
+
             p {
                 width: unset;
+                @include md{
+                    width: 300px;
+                }
             }
         }
 
         .mid {
+            @include custom_responsive(0px, 767.9px) {
+                display: none;
+            }
 
             .mid_line {
                 position: absolute;
@@ -32,6 +67,9 @@
                 width: 2px;
                 height: 310px;
                 background-color: $black;
+                @include md{
+                    left: 340px;
+                }
             }
         }
 
@@ -39,16 +77,43 @@
             width: 469px;
             padding-left: 96px;
 
+            @include xs {
+                padding-top: 30px;
+                padding-left: unset;
+            }
+
+            @include sm {
+                padding-top: 30px;
+                padding-left: unset;
+            }
+
             p {
                 font-weight: 700;
                 font-size: 24px;
                 line-height: 32px;
                 color: #232536;
+
+                @include sm {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 28px;
+                    width: 400px;
+                }
             }
 
             .profile {
                 display: flex;
                 gap: 65px;
+                padding-top: 121px;
+
+                @include xs {
+                    padding-top: 30px;
+                    display: block;
+                }
+                @include sm {
+                    padding-top: 30px;
+                    display: block;
+                }
 
                 .profile_name {
                     width: 257px;
@@ -69,10 +134,23 @@
                 .arrow {
                     flex: 1;
 
+                    @include xs {
+                        padding-top: 45px;
+                        padding-left: 150px;
+                    }
+                    @include sm {
+                        padding-top: 45px;
+                        padding-left: 250px;
+                    }
+
                     i {
                         border-radius: 50%;
                         background-color: $light_gray;
                         padding: 20px;
+
+                        @include xs {
+                            padding: 10px;
+                        }
                     }
                 }
             }

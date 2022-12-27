@@ -64,6 +64,7 @@
             @include xs {
                 font-size: 30px;
                 line-height: 40px;
+                width: 310px;
             }
 
             @include sm {
@@ -80,7 +81,7 @@
             color: $white;
 
             @include xs {
-                width: 330px;
+                width: 315px;
                 margin-bottom: 30px;
                 color: unset;
             }

@@ -61,7 +61,9 @@
                 padding: 40px 30px;
                 text-align: center;
                 border-radius: 3px;
-
+                &:hover{
+                    background-color: #FBF6EA;
+                }
                 @include lg {
                     width: 240px;
                 }

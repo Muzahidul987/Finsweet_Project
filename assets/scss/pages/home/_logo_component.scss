@@ -1,0 +1,16 @@
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive";
+@import "./../../components/nav";
+
+
+#logo_component {
+    ul {
+        display: flex;
+        gap: 70px;
+        padding: 107px;
+        flex-wrap: wrap;
+    }
+}

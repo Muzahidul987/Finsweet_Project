@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <div class="nav_toggle_btn">
+            <button onclick="nav_toggle.classList.toggle('active')">
+                <i class="fa-solid fa-align-justify"></i>
+            </button>
+        </div>
+        <div id="nav_toggle" class="navbar">
+            <button onclick="nav_toggle.classList.toggle('active')" class="cross">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="logo">
+                <div class="logo_img">
+                    <img src="./assets/images/Logo.png" alt="logo">
+                </div>
+            </div>
+            <div class="options">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
+                    <li><a href="./about.html">About Us</a></li>
+                    <li><a href="./contact.html">Contact Us</a></li>
+                </ul>
+                <div class="button">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+    </nav>

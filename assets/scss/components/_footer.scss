@@ -8,6 +8,14 @@ footer {
         background-color: $deep_color;
         padding: 53px 80px;
 
+        @include xs {
+            padding: 10px;
+        }
+
+        @include sm {
+            padding: 20px;
+        }
+
         .heading {
             position: relative;
 
@@ -66,7 +74,6 @@ footer {
 
 
                 .logo {
-                    padding: 26px 621px 26px 83px;
 
                     @include custom_responsive(0px, 767.9px) {
                         padding: 26px 5px;
@@ -100,6 +107,7 @@ footer {
                 .options {
                     display: flex;
                     gap: 32px;
+                    justify-content: right;
 
                     @include custom_responsive(0px, 767.9px) {
                         flex-wrap: wrap;
@@ -215,16 +223,41 @@ footer {
             background-color: #242848ba;
             color: white;
 
+            @include xs {
+                display: unset;
+                padding: 10px;
+                width: unset;
+            }
+
+            @include sm {
+                display: unset;
+                padding: unset;
+            }
+
             .dis {
                 h2 {
                     padding: 80px 64px;
                     width: 562px;
+
+                    @include xs {
+                        padding: 20px 10px;
+                        width: 313px;
+                    }
+
+                    @include sm {
+                        padding: 20px 10px;
+                    }
                 }
             }
 
             .subscribe {
                 display: flex;
                 gap: 24px;
+
+                @include xs {
+                    // display: unset;
+
+                }
 
                 .email {
                     input {
@@ -237,11 +270,22 @@ footer {
                         &::placeholder {
                             color: #6D6E76;
                         }
+
+                        @include xs {
+                            width: 130px;
+                            height: 40px;
+                        }
                     }
                 }
 
                 button {
                     margin-top: unset;
+
+                    @include xs {
+                        // margin-top: 20px;
+                        width: 129px;
+                        height: 40px;
+                    }
                 }
             }
         }
@@ -251,14 +295,32 @@ footer {
             display: grid;
             grid-template-columns: 1fr 1fr;
             color: white;
-            // .dis {}
+
+            @include xs {
+                grid-template-columns: 284px 1fr;
+            }
 
             .option {
-                ul{
+                @include xs {
+                    margin-top: -20px;
+                }
+
+                ul {
                     display: flex;
                     gap: 26px;
                     justify-content: right;
-                    // li{}
+
+                    @include xs {
+                        display: unset;
+                    }
+
+                    li {
+                        a {
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
                 }
             }
         }

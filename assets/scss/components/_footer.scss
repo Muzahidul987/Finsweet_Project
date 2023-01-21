@@ -5,6 +5,9 @@
 
 footer {
     .container {
+        background-color: $deep_color;
+        padding: 53px 80px;
+
         .heading {
             position: relative;
 
@@ -39,7 +42,6 @@ footer {
             }
 
             #footer_toggle {
-                background-color: $deep_color;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 position: relative;
@@ -202,6 +204,63 @@ footer {
                 }
             }
 
+        }
+
+        .footer_banner {
+            width: 1280px;
+            margin-top: 55px;
+            display: grid;
+            padding: 80px 64px;
+            grid-template-columns: 1fr 1fr;
+            background-color: #242848ba;
+            color: white;
+
+            .dis {
+                h2 {
+                    padding: 80px 64px;
+                    width: 562px;
+                }
+            }
+
+            .subscribe {
+                display: flex;
+                gap: 24px;
+
+                .email {
+                    input {
+                        border: 1px solid #a9986bd3;
+                        width: 323px;
+                        height: 56px;
+                        background-color: #242848ba;
+                        padding-left: 25px;
+
+                        &::placeholder {
+                            color: #6D6E76;
+                        }
+                    }
+                }
+
+                button {
+                    margin-top: unset;
+                }
+            }
+        }
+
+        .footer_footer {
+            margin-top: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            color: white;
+            .dis {}
+
+            .option {
+                ul{
+                    display: flex;
+                    gap: 26px;
+                    justify-content: right;
+                    li{}
+                }
+            }
         }
     }
 

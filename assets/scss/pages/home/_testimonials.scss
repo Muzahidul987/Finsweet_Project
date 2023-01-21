@@ -15,7 +15,8 @@
     @include xs {
         padding: unset;
     }
-    @include md{
+
+    @include md {
         padding: 11px;
     }
 
@@ -35,9 +36,10 @@
             padding: 30px;
             display: block;
         }
-        @include md{
+
+        @include md {
             padding: 40px;
-            gap: 45px;
+            gap: 20px;
         }
 
         .left {
@@ -49,7 +51,8 @@
 
             p {
                 width: unset;
-                @include md{
+
+                @include md {
                     width: 300px;
                 }
             }
@@ -67,7 +70,8 @@
                 width: 2px;
                 height: 310px;
                 background-color: $black;
-                @include md{
+
+                @include md {
                     left: 340px;
                 }
             }
@@ -84,6 +88,10 @@
 
             @include sm {
                 padding-top: 30px;
+                padding-left: unset;
+            }
+
+            @include md {
                 padding-left: unset;
             }
 
@@ -110,9 +118,14 @@
                     padding-top: 30px;
                     display: block;
                 }
+
                 @include sm {
                     padding-top: 30px;
                     display: block;
+                }
+
+                @include md {
+                    gap: 10px;
                 }
 
                 .profile_name {
@@ -133,11 +146,13 @@
 
                 .arrow {
                     flex: 1;
+                    cursor: pointer;
 
                     @include xs {
                         padding-top: 45px;
                         padding-left: 150px;
                     }
+
                     @include sm {
                         padding-top: 45px;
                         padding-left: 250px;
@@ -145,8 +160,12 @@
 
                     i {
                         border-radius: 50%;
-                        background-color: $light_gray;
+                        background-color: whitesmoke;
                         padding: 20px;
+
+                        &:hover {
+                            background-color: $light_gray;
+                        }
 
                         @include xs {
                             padding: 10px;

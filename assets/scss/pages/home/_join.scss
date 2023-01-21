@@ -1,0 +1,21 @@
+@import "./../../components/reset";
+@import "./../../components/buttons";
+@import "./../../components/common.scss";
+@import "./../../abstracts/variables";
+@import "./../../mixins/common";
+@import "./../../mixins/responsive";
+
+
+#join{
+    .container{
+        width: 414px;
+        margin: auto;
+        text-align: center;
+        padding: 128px 513px;
+        h2{}
+        p{
+            width: unset;
+        }
+        button{}
+    }
+}

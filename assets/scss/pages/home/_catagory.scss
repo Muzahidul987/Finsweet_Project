@@ -71,6 +71,9 @@
                 width: 235px;
                 padding: 28px;
                 border: 1px solid #6D6E76;
+                &:hover{
+                    background-color: #FFD050;
+                }
 
                 @include xs {
                     width: 237px;

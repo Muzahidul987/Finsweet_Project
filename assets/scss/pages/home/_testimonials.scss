@@ -41,12 +41,22 @@
             padding: 40px;
             gap: 20px;
         }
+        @include lg{
+            padding-left: 40px;
+            gap: unset;
+        }
+        @include xl{
+            gap: unset;
+        }
 
         .left {
             width: 349px;
 
             @include xs {
                 width: 300px;
+            }
+            @include lg{
+                width: unset;
             }
 
             p {
@@ -73,6 +83,12 @@
 
                 @include md {
                     left: 340px;
+                }
+                @include lg{
+                    left: 310px;
+                }
+                @include xl{
+                    left: 435px;
                 }
             }
         }
@@ -127,6 +143,9 @@
                 @include md {
                     gap: 10px;
                 }
+                @include lg{
+                    gap: unset;
+                }
 
                 .profile_name {
                     width: 257px;
@@ -147,7 +166,7 @@
                 .arrow {
                     flex: 1;
                     cursor: pointer;
-
+                    display: flex;
                     @include xs {
                         padding-top: 45px;
                         padding-left: 150px;

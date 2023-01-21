@@ -6,16 +6,35 @@
 @import "./../../mixins/responsive";
 
 
-#join{
-    .container{
+#join {
+    .container {
         width: 414px;
         margin: auto;
         text-align: center;
-        padding: 128px 513px;
-        h2{}
-        p{
+        padding: 128px 0px;
+
+        @include xs {
+            width: 237px;
+        }
+
+        // h2 {}
+
+        p {
             width: unset;
         }
-        button{}
+
+        button {
+            @include xs {
+                width: 100px;
+                height: 30px;
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            @include sm {
+                width: 150px;
+                height: 45px;
+            }
+        }
     }
 }

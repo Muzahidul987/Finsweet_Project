@@ -1,0 +1,208 @@
+@import "./reset";
+@import "./../abstracts/variables";
+@import "./../mixins/common";
+@import "./../mixins/responsive";
+
+footer {
+    .container {
+        .heading {
+            position: relative;
+
+            .footer_toggle_btn {
+                button {
+                    display: none;
+                    position: relative;
+
+                    i {
+                        font-size: 30px;
+                        color: $white;
+                        border: none;
+                        border-radius: 5px;
+
+                        &:hover {
+                            color: $light_gray;
+                        }
+                    }
+
+                    @include custom_responsive(0px, 767.9px) {
+                        display: block;
+                        margin: unset;
+                        width: unset;
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+
+                    }
+
+                    // @include md {}
+                }
+            }
+
+            #footer_toggle {
+                background-color: $deep_color;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                position: relative;
+
+                button {
+                    &.cross {
+                        display: none;
+
+                        @include custom_responsive(0px, 767.9px) {
+                            display: block;
+                            margin: unset;
+                            width: 35px;
+                            position: absolute;
+                            top: 0px;
+                            right: 0px;
+                            font-size: 30px;
+
+                        }
+                    }
+
+                }
+
+
+                .logo {
+                    padding: 26px 621px 26px 83px;
+
+                    @include custom_responsive(0px, 767.9px) {
+                        padding: 26px 5px;
+                        margin-top: 40px;
+                    }
+
+                    @include md {
+                        padding: 20px 5px;
+                        margin-left: 25px;
+                    }
+
+                    @include lg {
+                        padding: 15px 20px;
+                    }
+
+                    @include xl {
+                        padding: 20px 40px;
+                    }
+
+                    .logo_img {
+                        img {
+                            width: 140px;
+
+                            @include md {
+                                width: 110px;
+                            }
+                        }
+                    }
+                }
+
+                .options {
+                    display: flex;
+                    gap: 32px;
+
+                    @include custom_responsive(0px, 767.9px) {
+                        flex-wrap: wrap;
+                    }
+
+                    @include md {
+                        flex-wrap: wrap;
+                    }
+
+                    ul {
+                        display: flex;
+                        gap: 24px;
+                        padding: 25px 0px;
+
+                        @include custom_responsive(0px, 767.9px) {
+                            flex-wrap: wrap;
+                        }
+
+                        @include md {
+                            padding: 20px 0px;
+                            gap: 20px;
+                        }
+
+                        li {
+                            @include custom_responsive(0px, 767.9px) {
+                                width: 100%;
+                            }
+
+                            a {
+                                color: $white;
+                                text-align: center;
+                            }
+                        }
+                    }
+
+                    .button {
+                        padding: 12px 0px;
+
+                        button {
+                            margin-top: 0px;
+                            padding: 16px 48px;
+                            font-size: 18px;
+                            font-weight: 700;
+                            border-radius: 5px;
+
+                            @include custom_responsive(0px, 767.9px) {
+                                width: 140px;
+                                padding: 16px 10px;
+                                margin-left: 10px;
+                            }
+
+                            @include md {
+                                width: 100px;
+                                height: 35px;
+                                padding: 6px 0px;
+                                font-size: 15px;
+                            }
+
+                            @include lg {
+                                padding: unset;
+                                width: 100px;
+                                height: 40px;
+                            }
+
+                            @include xl {
+                                padding: unset;
+                                width: 160px;
+                                height: 45px;
+
+                            }
+                        }
+                    }
+                }
+
+                @include custom_responsive(0px, 767.9px) {
+                    display: unset;
+                    background-color: $deep_color;
+                    width: 50vw;
+                    height: calc(100vh - 60px);
+                    position: absolute;
+                    top: 0px;
+                    right: -100vw;
+                    @include tr;
+                    z-index: 999999;
+
+                    &.active {
+                        right: 0px;
+
+                    }
+                }
+
+                @include md {
+                    grid-template-columns: 330px 1fr;
+                }
+
+                @include lg {
+                    grid-template-columns: 550px 1fr;
+                }
+
+                @include xl {
+                    grid-template-columns: 700px 1fr;
+                }
+            }
+
+        }
+    }
+
+}
